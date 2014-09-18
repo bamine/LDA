@@ -4,7 +4,7 @@ import numpy.random as rnd
 
 
 class LdaModel(object):
-    def __init__(self, vocab_size, n_topics,initType=None,corpus=None):
+    def __init__(self, vocab_size=0, n_topics=0,initType=None,corpus=None):
         self.NUM_INIT = 1
         self.log_prob_w = np.zeros((n_topics, vocab_size))
         self.vocab_size = vocab_size
@@ -64,6 +64,21 @@ class LdaModel(object):
         f.write("vocab size: {0}\n".format(self.vocab_size))
         f.write("alpha: {5:10f}\n".format(self.alpha))
         f.close()
+
+    def load(self,name):
+        other_name=name+".other"
+        beta_name=name+".beta"
+        print "loading "+other_name
+        f=open(other_name)
+        for line in f:
+            num_topics, vocab_size, alpha=line.split()
+            self.num_topics=int(num_topics)
+            self.vocab_size=int(vocab_size)
+            self.alpha=float(alpha)
+        f.close()
+        self.log_prob_w=np.loadtxt(beta_name,delimiter=" ")
+
+
 
 
 
