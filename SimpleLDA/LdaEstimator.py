@@ -10,9 +10,9 @@ class LdaEstimator(object):
         gamma_sum=0.0
         for k in xrange(model.num_topics):
             gamma_sum+=gamma[k]
-            model.alpha += psi(gamma[k])
+            model.sufficient_statistics.alpha_ss += psi(gamma[k])
 
-        model.alpha-=model.num_topics*psi(gamma_sum)
+        model.sufficient_statistics.alpha_ss-=model.num_topics*psi(gamma_sum)
 
         for n in doc.length:
             for k in model.num_topics:

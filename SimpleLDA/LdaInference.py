@@ -1,6 +1,6 @@
 import math
 import numpy as np
-from scipy.special import psi, gamma
+from scipy.special import psi, gammaln
 from scipy import log
 
 
@@ -21,11 +21,11 @@ class LdaInference(object):
             dig[k] = psi(var_gamma[k])
             var_gamma_sum += var_gamma[k]
         digsum = psi(var_gamma_sum)
-        likelihood = gamma(model.alpha * model.num_topics) - model.num_topics * gamma(model.alpha) - gamma(
+        likelihood = gammaln(model.alpha * model.num_topics) - model.num_topics * gammaln(model.alpha) - gammaln(
             var_gamma_sum)
 
         for k in xrange(model.num_topics):
-            likelihood += (model.alpha - 1) * (dig[k] - digsum) + gamma(var_gamma[k]) - (var_gamma[k] - 1) * (
+            likelihood += (model.alpha - 1) * (dig[k] - digsum) + gammaln(var_gamma[k]) - (var_gamma[k] - 1) * (
                 dig[k] - digsum)
 
         for n in xrange(doc.length):

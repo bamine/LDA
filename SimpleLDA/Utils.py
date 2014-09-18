@@ -1,6 +1,6 @@
 import numpy as np
 from scipy import log
-from scipy.special import gamma, psi,polygamma
+from scipy.special import gammaln, psi,polygamma
 import scipy.optimize
 
 
@@ -11,7 +11,7 @@ def logSum(loga, logb):
         return loga + log(1 + np.exp(logb - loga))
 
 def alpha_likelihood(a,ss,D,K):
-    return D*(gamma(K*a)-K*gamma(a)) + (a-1)*ss
+    return D*(gammaln(K*a)-K*gammaln(a)) + (a-1)*ss
 
 def d_alpha_likelihood(a,ss,D,K):
     return D*(K*psi(K*a)-K*psi(a)) + ss

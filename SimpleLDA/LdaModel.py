@@ -2,10 +2,12 @@ import numpy as np
 from scipy import log
 import numpy.random as rnd
 from LdaSufficientStats import LdaSufficientStats
+from Utils import opt_alpha
 
 
 class LdaModel(object):
     def __init__(self, vocab_size=0, n_topics=0,initType=None,corpus=None):
+        self.alpha=10
         self.NUM_INIT = 1
         self.log_prob_w = np.zeros((n_topics, vocab_size))
         self.vocab_size = vocab_size
@@ -51,7 +53,7 @@ class LdaModel(object):
                     self.log_prob_w[k, w] = -100
 
         if estimate_alpha == 1:
-            self.alpha = opt_alpha(self.alpha, self.sufficient_statistics.num_docs, self.num_topics)
+            self.alpha = opt_alpha(self.sufficient_statistics.alpha_ss, self.sufficient_statistics.num_docs, self.num_topics)
             print "new alpha = {0} \n".format(self.alpha)
 
     def save(self,name):
