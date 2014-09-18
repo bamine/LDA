@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a54a22a-aeb3-4d47-a501-45af709d7578" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/LDA.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/LdaEstimator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/LdaInference.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/LdaModel.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/Utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/corpus.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleLDA/doc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="3a54a22a-aeb3-4d47-a501-45af709d7578" name="Default" comment="Added sufficient statistics&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleLDA/LdaEstimator.py" afterPath="$PROJECT_DIR$/SimpleLDA/LdaEstimator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleLDA/LdaModel.py" afterPath="$PROJECT_DIR$/SimpleLDA/LdaModel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LDA_toy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,13 +27,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LdaEstimator.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LdaEstimator.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaEstimator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="23" selection-start="946" selection-end="946" vertical-scroll-proportion="0.53412783" vertical-offset="0" max-vertical-offset="923">
+            <state line="51" column="27" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LdaInference.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaInference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="corpus.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleLDA/corpus.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LdaModel.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="35" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SimpleLDA/Utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="22" selection-start="809" selection-end="809" vertical-scroll-proportion="0.552546" vertical-offset="0" max-vertical-offset="923">
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LdaSufficientStats.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaSufficientStats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="21" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,7 +111,10 @@
         <option value="$PROJECT_DIR$/LdaModel.py" />
         <option value="$PROJECT_DIR$/Utils.py" />
         <option value="$PROJECT_DIR$/LdaInference.py" />
+        <option value="$PROJECT_DIR$/SimpleLDA/LdaSufficientStats.py" />
+        <option value="$PROJECT_DIR$/SimpleLDA/LdaModel.py" />
         <option value="$PROJECT_DIR$/SimpleLDA/LdaEstimator.py" />
+        <option value="$PROJECT_DIR$/SimpleLDA/Utils.py" />
       </list>
     </option>
   </component>
@@ -326,12 +368,38 @@
       <created>1410536377887</created>
       <updated>1410536377887</updated>
     </task>
+    <task id="LOCAL-00001" summary="Pure python implementation of Blei LDA (2003)">
+      <created>1411047029374</created>
+      <updated>1411047029375</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added EM variational estimator">
+      <created>1411052991194</created>
+      <updated>1411052991194</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added method to save model to file">
+      <created>1411053019641</created>
+      <updated>1411053019641</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added method to load model from file">
+      <created>1411053528454</created>
+      <updated>1411053528454</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added function to optimize for alpha">
+      <created>1411055609287</created>
+      <updated>1411055609287</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added sufficient statistics&#10;">
+      <created>1411055627328</created>
+      <updated>1411055627328</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -364,16 +432,64 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Pure python implementation of Blei LDA (2003)" />
+    <MESSAGE value="Added EM variational estimator" />
+    <MESSAGE value="Added method to save model to file" />
+    <MESSAGE value="Added method to load model from file" />
+    <MESSAGE value="Added function to optimize for alpha" />
+    <MESSAGE value="Added sufficient statistics&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sufficient statistics&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SimpleLDA/corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaSufficientStats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="21" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="35" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaInference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1615">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleLDA/LdaEstimator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="23" selection-start="946" selection-end="946" vertical-scroll-proportion="0.53412783" vertical-offset="0" max-vertical-offset="923">
+        <state line="51" column="27" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleLDA/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="22" selection-start="809" selection-end="809" vertical-scroll-proportion="0.552546" vertical-offset="0" max-vertical-offset="923">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

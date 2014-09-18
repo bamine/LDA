@@ -49,7 +49,7 @@ class LdaEstimator(object):
         else:
             model=LdaModel(corpus.vocab_size,num_topics)
         filename=directory+"/000"
-        #aba: save the lda model to file name
+        model.save(filename)
 
         likelihood=0.0
         likelihood_old=0.0
