@@ -58,12 +58,12 @@ class LdaModel(object):
 
     def save(self,name):
         f_name=name+".beta"
-        f=open(f_name)
+        f=open(f_name,"wb")
         for i in xrange(self.num_topics):
             f.write(" ".join("{5:10f}\n".format(b) for b in self.log_prob_w[i]))
         f.close()
         f_name=name+".other"
-        f=open(f_name)
+        f=open(f_name,"wb")
         f.write("num topics: {0}\n".format(self.num_topics))
         f.write("vocab size: {0}\n".format(self.vocab_size))
         f.write("alpha: {5:10f}\n".format(self.alpha))

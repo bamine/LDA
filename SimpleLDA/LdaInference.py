@@ -16,8 +16,8 @@ class LdaInference(object):
     @staticmethod
     def compute_likelihood(doc, model, phi, var_gamma):
         var_gamma_sum = 0
-        dig = np.zeros(model.n_topics)
-        for k in xrange(model.n_topics):
+        dig = np.zeros(model.num_topics)
+        for k in xrange(model.num_topics):
             dig[k] = psi(var_gamma[k])
             var_gamma_sum += var_gamma[k]
         digsum = psi(var_gamma_sum)

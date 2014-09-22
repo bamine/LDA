@@ -5,4 +5,4 @@ class LdaSufficientStats(object):
         self.alpha_ss = 0
         self.class_words = np.zeros((n_topics, vocab_size))
         self.class_total = np.zeros(n_topics)
-        self.num_docs = 0.0
+        self.num_docs = 0
