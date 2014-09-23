@@ -1,10 +1,10 @@
-from LdaInference import LdaInference
+from LdaInference import *
 from LdaModel import LdaModel
 from scipy.special import psi
 import numpy as np
 
 def docEStep(doc,gamma,phi,model):
-    likelihood=LdaInference.compute_likelihood(doc,model,phi,gamma)
+    likelihood= run_inference(doc,model,gamma,phi)
     gamma_sum=0.0
     for k in xrange(model.num_topics):
         gamma_sum+=gamma[k]
@@ -22,16 +22,16 @@ def docEStep(doc,gamma,phi,model):
 
 
 def write_word_assignements(file,doc,phi,model):
-    file.write("{:3d}".format(doc.length))
+    file.write("{0:03d}".format(doc.length))
     for n in xrange(doc.length):
-        file.write("{:4d}:{:2d}".format(doc.words[n],np.argmax(phi[n])))
+        file.write("{0:04d}:{1:02d}".format(doc.words[n], np.argmax(phi[n])))
     file.write("\n")
 
 
 def save_gamma(fileName,gamma,num_docs,num_topics):
     f=open(fileName)
     for d in xrange(num_docs):
-        line=" ".join("{5:10f}".format(g) for g in gamma[d])
+        line=" ".join("{0:5.10f}".format(g) for g in gamma[d])
         f.write(line)
         f.write("\n")
     f.close()
@@ -39,8 +39,8 @@ def save_gamma(fileName,gamma,num_docs,num_topics):
 
 def run_EM(startFileName,directory,corpus,num_topics,startType=None):
 
-    em_converged=10
-    max_iter=10
+    em_converged=0.0001
+    max_iter=100
     var_gamma=np.zeros((corpus.num_docs,corpus.num_docs))
     phi=np.zeros((corpus.max_doc_length,num_topics))
     if startType=="seeded":
@@ -58,7 +58,7 @@ def run_EM(startFileName,directory,corpus,num_topics,startType=None):
     likelihood_filename=directory+"/likelihood.dat"
     likelihood_file=open(likelihood_filename,"wb")
     i=0
-    while(converged <0 or converged > em_converged or (i<=2 and i<=max_iter)):
+    while(converged <0 or converged > em_converged or i<=2) and i<=max_iter:
         i+=1
         print " ****** EM iteration {0} ***** \n".format(i)
         for d in xrange(corpus.num_docs):
@@ -73,10 +73,12 @@ def run_EM(startFileName,directory,corpus,num_topics,startType=None):
 
         #likelihood_file.write("{:10.10f}".format(likelihood)+"\t"+"{:5.5e} \n".format(converged))
         if i%10==0:
-            my_file=directory+"/{d}".format(i)
+            my_file=directory+"/{0}".format(i)
             #save lda model
-            my_file=directory+"/{d}.gamma".format(i)
+            my_file=directory+"/{0}.gamma".format(i)
             save_gamma(my_file,var_gamma,corpus.n_docs,model.num_topics)
+
+
 
     #output model
 

@@ -27,7 +27,7 @@ def opt_alpha(alpha_ss,num_docs,num_topics):
     def fprime(a):
         return d_alpha_likelihood(a,alpha_ss,num_docs,num_topics)
 
-    log_alpha_opt=scipy.optimize.fmin_bfgs(f,100,fprime)
+    log_alpha_opt=scipy.optimize.fmin_bfgs(f,10,fprime)
     return np.exp(log_alpha_opt)
 
 

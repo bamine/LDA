@@ -7,7 +7,7 @@ from Utils import opt_alpha
 
 class LdaModel(object):
     def __init__(self, vocab_size=0, n_topics=0,initType=None,corpus=None):
-        self.alpha=10
+        self.alpha=1.0
         self.NUM_INIT = 1
         self.log_prob_w = np.zeros((n_topics, vocab_size))
         self.vocab_size = vocab_size
@@ -29,7 +29,7 @@ class LdaModel(object):
     def random_initialize(self, vocab_size, n_topics):
         self.sufficient_statistics.alpha = 0
         self.sufficient_statistics.class_words = np.full((n_topics, vocab_size), 1 / vocab_size + rnd.random())
-        self.sufficient_statistics.class_total = self.class_words.sum(axis=1)
+        self.sufficient_statistics.class_total = self.sufficient_statistics.class_words.sum(axis=1)
         self.sufficient_statistics.num_docs = 0.0
 
     def corpus_initialize(self, corpus):
@@ -48,7 +48,7 @@ class LdaModel(object):
         for k in xrange(self.num_topics):
             for w in xrange(self.vocab_size):
                 if self.sufficient_statistics.class_words[k, w] > 0:
-                    self.log_prob_w[k, w] = log(self.sufficient_statistics.class_words[k, w]) - log(self.class_total[k])
+                    self.log_prob_w[k, w] = log(self.sufficient_statistics.class_words[k, w]) - log(self.sufficient_statistics.class_total[k])
                 else:
                     self.log_prob_w[k, w] = -100
 
